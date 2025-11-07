@@ -1,0 +1,78 @@
+body {
+    margin: auto;
+    font-family: 'Instagram Sans', 'Roboto', 'San Francisco', Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #313647;
+}
+
+h1 {
+    margin-left: 3.2rem;
+}
+
+h3 {
+    font-size: small;
+    font-weight: 600;
+}
+
+.newPost {
+    margin: 5rem;
+    padding: 2rem;
+    height: 350px;
+    width: 250px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 8px black;
+    border: none;
+    background-color: #F4F4F4;
+}
+
+.newPost textarea{
+    margin-top: 1rem;
+    padding: 0.6rem;
+    width: 225px;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+.username {
+    margin-top: 1rem;
+    padding: 0.6rem;
+    width: 225px;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+
+.newPost button {
+    margin: 2rem 0 0 4.5rem;
+    padding: 0.6rem;
+    width: 100px;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: #1A2A4F;
+    color: #F4F4F4;
+}
+
+.newPost button:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    padding: 0.3rem;
+    background: #F4F4F4;
+    color: black;
+    font-size: 1rem;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 0.2rem;  
+}
+
+input[type="file"]::file-selector-button:hover {
+    text-decoration: underline;
+}

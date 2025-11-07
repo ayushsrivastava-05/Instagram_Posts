@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in detail</title>
+    <link rel="stylesheet" href="/show.css">
+</head>
+<body>
+    <h1>Post in Detail</h1>
+    <div class="container">
+        <h2><%= post.username %></h2>
+        <img src="/uploads/<%= post.image %>" alt="img">
+        <p><%= post.caption %></p>
+    </div>
+    <h2 class="back"><a href="http://localhost:8080/posts">Back</a></h2>
+    
+</body>
+</html>

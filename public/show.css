@@ -1,0 +1,43 @@
+body {
+    margin: auto;
+    font-family: 'Instagram Sans', 'Roboto', 'San Francisco', Arial, sans-serif;
+    background-color: #EFECE3;
+}
+
+h1 {
+    margin-left: 33rem;
+    margin-bottom: -1px;
+}
+
+.back {
+    margin-left: 2rem;
+    margin-bottom: -1px;
+    margin-top: -1px ;
+}
+
+.back a {
+    text-decoration: none;
+    color: black;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin-left: 20rem;
+    height: 460px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 2px 2px 5px black;
+}
+
+.container img {
+    height: 350px;
+    width: 500px;
+    border-radius: 0.2rem;
+}
+
+.container:hover {
+    cursor: pointer;
+}

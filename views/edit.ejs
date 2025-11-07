@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit in Post</title>
+    <link rel="stylesheet" href="/new.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="newPost">
+            <h1>Edit Post</h1>
+            <h3>Username : @<%= post.username %></h3>
+
+            <form method="post" enctype="multipart/form-data" action="/posts/<%= post.id %>?_method=PATCH"> 
+                <textarea rows="5" cols="30" name="caption"><%= post.caption %></textarea> <br>
+                <input type="file" name="image" accept="image/*"> <br>
+                <button>Submit</button>
+            </form>
+            
+        </div>
+
+    </div>
+</body>
+</html>
