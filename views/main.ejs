@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Posts</title>
+    <title>Instagram</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,39 +12,190 @@
 </head>
 
 <body>
-    <h1>Instagram Posts</h1>
     <div class="container">
-        <% for(let post of posts) {%>
-            <div class="posts">
-                <div class="header">
-                    <img src="/uploads/<%= post.image %>" alt="imgage" class="profilePic">
-                    <h4>
-                        <%= post.username %>
-                    </h4>
+        <!-- Navigation -->
+        <div class="nav">
+            <h1>Instagram</h1>
+            <div class="icons">
+                <div class="icon-row">
+                    <i class="fa-regular fa-house"></i>
+                    <span>Home</span>
                 </div>
-
-                <a href="http://localhost:8080/posts/<%= post.id %>"><img src="/uploads/<%= post.image %>" alt="imgage" class="img"></a>
-
-                <div class="reviews">
+                <div class="icon-row">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </div>
+                <div class="icon-row">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Explore</span>
+                </div>
+                <div class="icon-row">
+                    <i class="fa-regular fa-circle-play"></i>
+                    <span>Reels</span>
+                </div>
+                <div class="icon-row">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="icon-row">
                     <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-comment"></i>
-                    <i class="fa-regular fa-share-from-square"></i>
+                    <span>Notifications</span>
                 </div>
-
-                <h5><%= post.caption %></h5>
-
-
-                <div class="btn">
-                    <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
-                    <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
-                        <button>Delete</button>
-                    </form>
+                <div class="icon-row newPost">
+                    <a href="http://localhost:8080/posts/new">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Create</span>
+                    </a>
                 </div>
-
+                <div class="icon-row">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="icon-row">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>More</span>
+                </div>
             </div>
+        </div>
+
+        <!-- content -->
+        <div class="content">
+            <!-- Header  -->
+            <div class="header">
+                <div class="stories">
+                    <div class="story">
+                         <img src="/uploads/img1.jpeg" alt="#"> <br>
+                         <span>user1</span>
+                    </div>
+                    <div class="story">
+                         <img src="/uploads/img9.jpeg" alt="#"> <br>
+                         <span>user2</span>
+                    </div>
+                    <div class="story">
+                         <img src="/uploads/img5.jpeg" alt="#"> <br>
+                         <span>user3</span>
+                    </div>
+                    <div class="story">
+                         <img src="/uploads/img3.jpeg" alt="#"> <br>
+                         <span>user4</span>
+                    </div>
+                    <div class="story">
+                         <img src="/uploads/img11.jpeg" alt="#"> <br>
+                         <span>user5</span>
+                    </div>
+                    <div class="story">
+                         <img src="/uploads/img7.jpeg" alt="#"> <br>
+                         <span>user6</span>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- Main  -->
+            <% for(let post of posts) {%>
+                <div class="posts">
+                    <div class="dp">
+                        <img src="/uploads/<%= post.image %>" alt="image" class="profilePic">
+                        <h4><%= post.username %></h4>
+                    </div>
+
+                    <a href="http://localhost:8080/posts/<%= post.id %>"><img src="/uploads/<%= post.image %>" alt="imgage" class="img"></a>
+
+                    <div class="reviews">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-share-from-square"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+
+                    <h5><%= post.caption %></h5>
+
+
+                    <div class="btn">
+                        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+                        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+
+                </div>
             <% } %>
+        </div>
+
+        <!-- Suggestions  -->
+        <div class="suggestions">
+            <div class="user">
+                <img src="/uploads/img3.jpeg" alt="#">
+                <div>
+                    <span class="username">ayushsrivastavaaa</span>
+                    <br>
+                    <span class="name">Ayush Srivastava</span>
+                </div>
+                <a href="#">Switch</a>
+            </div>
+
+            <div class="suggested">
+                <span>Suggested for you</span>
+                <h5>Sell All</h5>
+            </div>
+
+            <div class="suggested-users">
+                <div class="suggested-user-row">
+                    <img src="/uploads/img7.jpeg" alt="#">
+                    <div>
+                        <span class="username">user1</span>
+                        <br>
+                        <span class="fbu">Followed by _user8..</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggested-user-row">
+                    <img src="/uploads/img10.jpeg" alt="#">
+                    <div>
+                        <span class="username">user_4</span>
+                        <br>
+                        <span class="fbu">Followed by golden..</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggested-user-row">
+                    <img src="/uploads/img8.jpeg" alt="#">
+                    <div>
+                        <span class="username">_user7</span>
+                        <br>
+                        <span class="fbu">Followed by _user1..</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggested-user-row">
+                    <img src="/uploads/img11.jpeg" alt="#">
+                    <div>
+                        <span class="username">__user_4</span>
+                        <br>
+                        <span class="fbu">Followed by _user7..</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggested-user-row">
+                    <img src="/uploads/img9.jpeg" alt="#">
+                    <div>
+                        <span class="username">be_cats</span>
+                        <br>
+                        <span class="fbu">Followed by __user..</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+            <div class="message">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Messages</span>
+                <img src="/uploads/img9.jpeg" alt="#" class="dog">
+                <img src="/uploads/img2.jpeg" alt="#" class="cat">
+            </div>
+
+        </div>
+
     </div>
-    <button class="newPostbtn"><a href="http://localhost:8080/posts/new">Create new post</a></button>
 </body>
 
 </html>

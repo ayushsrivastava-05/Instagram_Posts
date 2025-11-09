@@ -25,12 +25,6 @@ app.use('/uploads', express.static('uploads'));
 let posts = [
     {
         id: uuidv4(),
-        username: "dreamscape_hooves",
-        image: "img1.jpeg",
-        caption: "Lost in a daydream among wildflowers and magic."
-    },
-    {
-        id: uuidv4(),
         username: "meowsterpiece",
         image: "img2.jpeg",
         caption: "Sometimes the smallest things take up the most room in your heart."
@@ -40,7 +34,14 @@ let posts = [
         username: "goldenjoys",
         image: "img3.jpeg",
         caption: "When you pause to enjoy the little wonders, life becomes extraordinary."
+    },
+    {
+        id: uuidv4(),
+        username: "dreamscape_hooves",
+        image: "img1.jpeg",
+        caption: "Lost in a daydream among wildflowers and magic."
     }
+    
 ];
 
 app.get("/posts", (req, res) => {
@@ -49,7 +50,7 @@ app.get("/posts", (req, res) => {
 
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
-})
+});
 
 app.post("/posts", upload.single('image'), (req, res) => {
     let { username, caption } = req.body;
