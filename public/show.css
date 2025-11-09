@@ -1,7 +1,8 @@
 body {
     margin: auto;
     font-family: 'Instagram Sans', 'Roboto', 'San Francisco', Arial, sans-serif;
-    background-color: #EFECE3;
+    background-color: black;
+    color: white;
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
 
 .back a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .back a:hover {
@@ -29,7 +30,7 @@ h1 {
     height: 460px;
     width: 600px;
     text-align: center;
-    box-shadow: 2px 2px 5px black;
+    border: 1px solid rgb(47, 47, 47);
 }
 
 .container img {
